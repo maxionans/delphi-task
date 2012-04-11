@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{F12C383E-9108-469D-ADD1-0CB417653895}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="TarFTP.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Test\TarFTP_Tests.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="TarFTP">
+			<MSBuild Projects="TarFTP.dproj"/>
+		</Target>
+		<Target Name="TarFTP:Clean">
+			<MSBuild Projects="TarFTP.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TarFTP:Make">
+			<MSBuild Projects="TarFTP.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="TarFTP_Tests">
+			<MSBuild Projects="Test\TarFTP_Tests.dproj"/>
+		</Target>
+		<Target Name="TarFTP_Tests:Clean">
+			<MSBuild Projects="Test\TarFTP_Tests.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TarFTP_Tests:Make">
+			<MSBuild Projects="Test\TarFTP_Tests.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="TarFTP;TarFTP_Tests"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="TarFTP:Clean;TarFTP_Tests:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="TarFTP:Make;TarFTP_Tests:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

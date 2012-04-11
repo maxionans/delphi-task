@@ -1,0 +1,58 @@
+TEST TASK
+for getting remote Delphi developer job
+
+Estimated completion time: 1.5 hours
+
+---
+
+You are about to create a Win32 app using Delphi 2010 called TarFTP.
+It contains one window with a list box. User can drag&drop files to
+this list from Windows Explorer and their names will be added to the
+list. There is "Upload" button under the list. When user clicks that
+button the application will package those files into one tar archive
+and upload it to FTP server.
+
+All heavy processing (archiving and uploading) should perform in
+background thread. User should see appropriate UI feedback, e.g.
+progress bar with speed and elapsed time.
+
+This description specifies only core concept. If you are unsure about
+something - you are free to do as you wish, your main aim is to make
+simple and good software.
+
+
+TECHNICAL DETAILS
+- FTP credentials
+  Host: frantic-13.com
+  Login: delphitest@frantic-13.com
+  Password: 9rVT*o~MTpfO
+- Suggested components
+  LibTar: http://www.destructor.de/libtar/index.htm
+  Indy: (bundled with Delphi)
+
+BEFORE YOU START
+Revision control systems are vital in software development, managing
+your source code is very important skill. As a part of this task you
+should submit your solution to Github.
+
+Github is a free online repository hosting for Git. If you don't have
+account at Github you should register one. To submit a solution, fork
+this repository (see "Fork" button at top), clone it to your local
+machine, add your project, commit and push.
+
+- More about Git: http://git-scm.com/
+- Github registration: https://github.com/signup/free
+- Git for Windows: http://msysgit.github.com/
+
+
+LIMITATIONS
+- You should provide Delphi project without external dependencies. If
+  you use third-party components, you should include their source code
+  along with your submission.
+
+BONUS POINTS
+- Huge bonus for modular program structure
+- Huge bonus if your code contains unit-tests
+- Ultimate bonus if your code is developed using TDD
+- Additional bonus for clear project folder structure and git usage
+- Additional bonus for nice UI and meaningful error messages
